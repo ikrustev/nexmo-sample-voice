@@ -36,4 +36,4 @@ node index.js
 
 #### Try
 
-Call a LVN that is linked to the configured voice app and follow the voice prompts.
+Call an LVN that is linked to the configured voice app and follow the voice prompts.
