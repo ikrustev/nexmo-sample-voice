@@ -2,7 +2,7 @@
 
 #### Overview
 
-The sample implements simple IVR offering options listed to audio file, hear the current time
+The sample implements simple IVR offering options to listen to audio file, hear the current time
 or connect to an agent.  
 
 #### Install dependencies
