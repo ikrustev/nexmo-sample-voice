@@ -1,0 +1,7 @@
+API_KEY=
+API_SECRET=
+APPLICATION_ID=
+PRIVATE_KEY=
+OUTBOUND_LVN=<from-number-for-outbound-call-to-agent>
+AGENT_NUMBER=<to-number-for-outbound-call-to-agent>
+MUSIC_URL=<url to audio file, for example https://static.guim.co.uk/audio/kip/standalone/music/1222963579537/3408/gnd.msc.081003.Buena_Vista.mp3>
