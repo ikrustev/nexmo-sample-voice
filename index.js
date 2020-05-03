@@ -27,16 +27,17 @@ app.post('/webhooks/voice/answer', (req, res) => {
     const ncco = [
         {
             action: "talk",
-            text: ", Welcome to Nexmo Voice API sample. " +
+            text: "Welcome to Nexmo Voice API sample. " +
                 "Please " +
                 "press 1 for music, " +
-                "press 2 for current time, " +
+                "press 2 for current time " +
                 "or any other digit to talk to an agent.",
             voice_name: TTS_VOICE,
             bargeIn: true
         },
         {
             action: "input",
+            timeOut: 10,
             maxDigits: 1
         },
         {
@@ -99,12 +100,12 @@ function talkCurrentTime(callId) {
     const date = "" + now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear();
     const time = "" + now.getHours() + ":" + now.getMinutes();
     const text =
-        '<speak>' +
+        '<speak><prosody rate="70%">' +
             'It is ' +
             '<say-as interpret-as="date" format="dmy">' + date + '</say-as> ' +
-            'at ' +
+            ', ' +
             '<say-as interpret-as="time" format="hm24">' + time + '</say-as>' +
-        '</speak>';
+        '</prosody></speak>';
     // Using transfer NCCO instead API call so that the phone call is closed when done.
     nexmo.calls.update(
         callId,
